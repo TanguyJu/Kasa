@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  .logo {
+    height: 68px;
+  }
+
+  nav {
+    display: flex;
+    gap: 30px;
+
+    .nav-link {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      color: #000;
+
+      &.active {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    nav {
+      gap: 15px;
+      margin-top: 10px;
+    }
+  }
+}

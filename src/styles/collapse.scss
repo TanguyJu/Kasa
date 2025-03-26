@@ -1,0 +1,44 @@
+.collapse {
+    width: 100%;
+    max-width: 1023px;
+    margin: 20px auto;
+  
+    .collapse-header {
+      background-color: #ff6060;
+      color: white;
+      border-radius: 5px;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+  
+      .chevron {
+        transition: transform 0.3s ease;
+      }
+  
+      .chevron.open {
+        transform: rotate(180deg);
+      }
+    }
+  
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+  
+      &.open {
+        max-height: 500px; 
+        padding: 15px 20px;
+        background-color: #f0efef;
+        border-radius: 5px;
+      }
+    }
+  
+    .collapse-text {
+      font-size: 16px;
+      color: #000;
+    }
+  }
