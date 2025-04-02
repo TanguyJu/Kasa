@@ -1,37 +1,55 @@
 .card {
-  width: 25%;
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-start;
   padding: 15px;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  text-decoration: none;
   color: white;
   font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;       
+  position: relative;
+  box-sizing: border-box;
+
+  .card-title {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+  }
 
   &::after {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-    z-index: 0;
-    border-radius: 10px;
-  }
-
-  .card-title {
-    position: relative;
     z-index: 1;
+    pointer-events: none;
   }
 
-  @media (max-width: 1024px) {
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  @media (min-width: 1025px) {
+    width: 31%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
     width: 45%;
   }
 
   @media (max-width: 768px) {
     width: 100%;
+    max-width: 100%;
   }
 }

@@ -1,6 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import data from "../data/data.json";
-import Slideshow from "../components/Slideshow";
+import Slideshow from "../components/slideshow.jsx";
 import Collapse from "../components/Collapse";
 import "../styles/logement.scss";
 
