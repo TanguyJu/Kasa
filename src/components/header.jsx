@@ -5,7 +5,9 @@ import "../styles/header.scss";
 export default function Header() {
   return (
     <header className="header">
+      <NavLink to="/">
       <img src={logo} alt="Kasa" className="logo" />
+      </NavLink>
       <nav>
         <NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           Accueil
